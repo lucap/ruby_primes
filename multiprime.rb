@@ -18,4 +18,5 @@ def multiply(arr)
   res 
 end
 
-print_table multiply(find_primes(10))
+n = (!ARGV[0].nil? ? ARGV[0].to_i : 10)
+print_table multiply(find_primes(n))
