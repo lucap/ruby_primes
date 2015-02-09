@@ -1,15 +1,9 @@
-require 'prime'
-
 def print_table(t)
   t.each {|r| puts "#{r.join "\t"}\n"}
 end
 
-def _find_primes(n)
-  Prime.first(n)
-end
-
 def find_primes(n)
-  # http://codegolf.stackexchange.com/a/19994
+  # source: http://codegolf.stackexchange.com/a/19994
   (2..(1.0/0)).lazy.select{|i|!(2...i).any?{|j|i%j==0}}.take(n).to_a
 end
 
